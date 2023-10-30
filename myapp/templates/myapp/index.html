@@ -1,0 +1,24 @@
+{% extends "myapp/base.html" %}
+
+{% load static %}
+
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}">
+
+
+<h1> My App </h1>
+
+<p><a href="{% url 'polls:index' %}">アプリで投票しよう</a></p>
+<P></P>
+<p><a href="{% url 'album:showall' %}">画像アップロードアプリ</a></p>
+<!-- <p><a href="http://localhost:8000/album/showall/">Go to Album Showall</a></p> -->
+
+<p>This is the home page.
+    <br>The current directory path is this.　 
+    <br>main/myapp/templates/myapp/index.html
+</p>
+<p><img src="{{ MEDIA_URL }}/images/pc2022.png" alt="Your Image" width="700"></p>
+{% endblock %}

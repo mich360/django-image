@@ -1,0 +1,21 @@
+{% extends "myapp/base.html" %}
+
+{% load static %}
+
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}">
+
+<h1>Please Login to Polls App.</h1>
+<form action="{% url 'polls:login' %}" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Login">
+</form>
+<p>or <a href= "{% url 'polls:signup' %}">Sign Up</a></p>
+
+{% endblock %}
+
+

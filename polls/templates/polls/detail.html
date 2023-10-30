@@ -1,0 +1,29 @@
+{% extends "myapp/base.html" %}
+
+{% load static %}
+
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}">
+<p>ようこそ{{ user|title }}さん!　良かった</p>
+<h1> {{ question.question_text }}</h1>
+{{ form.non_field_errors }}
+<form action="{% url 'polls:detail' question.id %}" method="post">
+{% csrf_token %}
+<p>
+    {{ form.your_choice.label }}<br>
+    {{ form.your_choice }}
+</p>
+<p>
+    {{ form.new_option.label }}<br>
+    {{ form.new_option }}
+</p>
+<input type="submit" value="投票する">
+</form>
+<p>or <a href= "{% url 'polls:logout' %}">Logout</a></p>
+
+{% endblock %}
+
+
