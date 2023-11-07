@@ -1,33 +1,33 @@
-# Byte-compiled / optimized / DLL files
+# バイトコンパイル/最適化/DLL ファイル
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# Caches
+キャッシュ数
 .cache/
 
-# Logs and databases
+# ログとデータベース
 *.log
 *.sql
 
-# Environment variables
+# 環境変数
 .env
 
-# IDE-specific files and directories (e.g. VSCode, PyCharm)
+# IDE 固有のファイルとディレクトリ (例: VSCode、PyCharm)
 .vscode/
 .idea/
 
-# System or backup files
+# システムまたはバックアップ ファイル
 .DS_Store
 Thumbs.db
 
-# Virtual environment (Assuming your virtual environment is named 'venv')
+# 仮想環境 (仮想環境の名前が「venv」であると仮定します)
 venv/
 
-# Compiled Python files (bytecode)
+# コンパイルされた Python ファイル (バイトコード)
 *.pyc
 __pycache__/
 
-# Ignore the SQLite database file
+# SQLite データベース ファイルを無視します
 db.sqlite3
