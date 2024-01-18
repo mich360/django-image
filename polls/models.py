@@ -19,3 +19,10 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
+    
+    from django.db import models
+
+    class YourModel(models.Model):
+    # モデルのフィールドを定義
+        name = models.CharField(max_length=100)
+    # 他のフィールドも追加するか、実際のモデル定義に合わせる
